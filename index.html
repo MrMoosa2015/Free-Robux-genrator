@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Robux Generator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #1e1e2f;
+      padding: 40px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input, select {
+      background-color: #2e2e4d;
+      color: white;
+    }
+
+    button {
+      background-color: #00ffcc;
+      color: #1e1e2f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #00ddb0;
+    }
+
+    .loading {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .dot {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Free Robux Generator</h1>
+  <input type="text" id="username" placeholder="Enter your Roblox username">
+  <select id="robuxAmount">
+    <option value="1000">1,000 Robux</option>
+    <option value="5000">5,000 Robux</option>
+    <option value="10000">10,000 Robux</option>
+  </select>
+  <button onclick="generate()">Generate Robux</button>
+
+  <div class="loading" id="statusText">
+    Connecting<span class="dot">...</span>
+  </div>
+</div>
+
+<script>
+  function generate() {
+    const username = document.getElementById('username').value.trim();
+    if (!username) {
+      alert("Please enter a username.");
+      return;
+    }
+
+    const status = document.getElementById("statusText");
+    status.style.display = "block";
+    status.textContent = "Connecting to Roblox server...";
+
+    setTimeout(() => {
+      status.textContent = "Verifying username...";
+    }, 1500);
+
+    setTimeout(() => {
+      status.textContent = "Injecting Robux...";
+    }, 3000);
+
+    setTimeout(() => {
+      status.textContent = "Finalizing...";
+    }, 4500);
+
+    setTimeout(() => {
+      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Rickroll
+    }, 6000);
+  }
+</script>
+
+</body>
+</html>
